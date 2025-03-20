@@ -32,15 +32,19 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
+     
+     
+     
+     
+      <Text style={[styles.sectionTitle,{
+            color: isDarkMode ? Colors.red : Colors.black,
           },
         ]}>
         {title}
       </Text>
+
+
+
       <Text
         style={[
           styles.sectionDescription,
@@ -89,11 +93,11 @@ function App(): React.JSX.Element {
             paddingHorizontal: safePadding,
             paddingBottom: safePadding,
           }}>
-          <Section title="Step One">
+          <Section title="Step One 2  dddd">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
-          <Section title="See Your Changes">
+          <Section title="See Your Changes h">
             <ReloadInstructions />
           </Section>
           <Section title="Debug">
@@ -111,7 +115,7 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    marginTop: 32,
+    marginTop: 70,
     paddingHorizontal: 24,
   },
   sectionTitle: {
@@ -121,7 +125,7 @@ const styles = StyleSheet.create({
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
-    fontWeight: '400',
+    fontWeight: '600',
   },
   highlight: {
     fontWeight: '700',
