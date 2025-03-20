@@ -7,6 +7,8 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
+import COLORS from "./theme/colors";
+
 import {
   ScrollView,
   StatusBar,
@@ -33,11 +35,8 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   return (
     <View style={styles.sectionContainer}>
      
-     
-     
-     
       <Text style={[styles.sectionTitle,{
-            color: isDarkMode ? Colors.red : Colors.black,
+            color: isDarkMode ? COLORS.yellow : COLORS.red,
           },
         ]}>
         {title}
@@ -62,7 +61,7 @@ function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.darker : Colors.white,
   };
 
   /*
@@ -93,7 +92,7 @@ function App(): React.JSX.Element {
             paddingHorizontal: safePadding,
             paddingBottom: safePadding,
           }}>
-          <Section title="Step One 2  dddd">
+          <Section title="Step One 2 sdfsdf dddd">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
